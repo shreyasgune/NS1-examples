@@ -90,7 +90,7 @@ func GetHealthcheckStatusNS1(client *api.Client, healthcheckID string) *monitor.
 }
 
 // GetAllHealthChecksNS1 gets you a list of existing healthchecks
-func GetAllHealthChecksNS1(client *api.Client, healthcheckID string) []*monitor.Job {
+func GetAllHealthChecksNS1(client *api.Client) []*monitor.Job {
 	healthchecks, _, err := client.Jobs.List()
 	if err != nil {
 		log.Fatal(err)
